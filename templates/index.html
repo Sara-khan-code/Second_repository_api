@@ -1,6 +1,21 @@
 <h1>Hello!</h1>
-<p>this i my webpage lets see</p>
+<p>this i my webpage {{bold_stuff|safe}} lets see</p>
 
-<h2>hi sara</h2>
+<h2>hi {{firstname}}</h2>
 
-<h3>We will some python templates</h2>
+<h3>We will some python templates</h3>
+
+
+<h4>{{piza_bold | safe}}</h4>
+
+{% for topping in fav_piza%}
+    {%if topping == 23%}
+      {{topping + 10}} <br/>
+    {%else%}
+     {{topping}}<br/>
+    {%endif%}
+{%endfor%}
+
+<br/><br/>
+
+{{fav_piza.3+10}}
